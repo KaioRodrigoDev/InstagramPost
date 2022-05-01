@@ -6,7 +6,7 @@ Esse Projeto foi desenvolvido **HTML e CSS**.
 
 Nesse projeto fiz um clone de um Post no Instagram usando HTML e CSS
 
-![Logo do BuscaCep](src/Animation.gif)
+![Logo do ClonePost](src/Animation.gif)
 
 ## Informações
 

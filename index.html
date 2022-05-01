@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colored Test</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-main">
+
+      <section class="Header Section">
+        <div class="header">
+          <div class="avatar">
+            <img
+              id="profile"
+              src="./src/images/Ellipse 1.svg"
+              alt="Profile Photo"
+            />
+            <div>
+              <h1 class="name">Erik Dunlop</h1>
+              <p class="city">San Francisco, California</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Swiper Section">
+        <div>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  id="img"
+                  src="https://picsum.photos/id/0/5616/3744"
+                  alt="api"
+                  srcset=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  id="img"
+                  src="https://picsum.photos/id/1/5616/3744"
+                  alt="api"
+                  srcset=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  id="img"
+                  src="https://picsum.photos/id/2/2500/1667"
+                  alt="api"
+                  srcset=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  id="img"
+                  src="https://picsum.photos/id/3/2500/1667"
+                  alt="api"
+                  srcset=""
+                />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Footer Section">
+        <div class="footer">
+          <div class="footer-icons">
+            <span>
+              <a class="liked" id="liked" onclick="liked()">
+              <img src="src/images/heart.svg" alt="Like" />
+            </a>
+            </span>
+            <span>
+
+              <img id="heart" class="bi-heart-fill" src="src/images/heart-fill.svg" alt="">
+            </span>
+              
+            
+            <span>
+              <img src="src/images/chat.svg" alt="Commnet" />
+            </span>
+            <span>
+              <img src="src/images/send.svg" alt="Send" />
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="Comments Section">
+        <div id="comments" class="comments">
+          <p class="text text-post">
+            <span class="name">Erik Dunlop </span> dolor sit amet, consectetur
+            adipiscing elit. Mi enim ut eu cras ultrices eget et tristique
+            proin. Mi enim ut eu cras ultrices eget et tristique proin.
+          </p>
+        </div>
+        <div class="input">
+        <input class="inputText" id="post" type="text" />
+        <button class="inputButton" onclick="Post()">Post</button>
+      </section>
+
+    </div>
+    <script>
+      // function liked() {
+
+      //   console.log("curtiu?");
+      //   let heart = document.getElementById("coracao").classList.toggle("heart-animation");
+
+      // }
+      function liked() {
+        let heart = document.getElementById("heart")
+        if (heart.classList.contains("heart-animation") ){
+          let heart = document.getElementById("heart").classList.remove("heart-animation");
+          console.log("curtiu");
+        } else {
+          let heart = document.getElementById("heart").classList.add("heart-animation");
+          console.log("nao curtiu");
+        }
+    }
+    </script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      // var url = "https://picsum.photos/200"; //Sua URL
+
+      // var api = new XMLHttpRequest();
+      // api.open("GET", url, false);
+      // api.send();
+
+      // document.getElementById("img").value = api.response;
+
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      function Post() {
+        var comnt = document.getElementById("post").value;
+        var posts = document.getElementById("comments").innerHTML;
+        posts +=
+          "<p class='text'> <span class='name'>Comment</span> " +
+          comnt +
+          "</p>";
+
+        document.getElementById("comments").innerHTML = posts;
+        document.getElementById("post").value=''
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:display=swap');
+
+
+/* ROOTS */
+*{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding-top: 20px;
+}
+
+
+
+/* SWIPER */
+.swiper {
+  width: 500px;
+  height: 300px;
+}
+.swiper-slide {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+img {
+  
+  width: 600px;
+  height: 300px;
+  object-fit: cover
+}
+
+
+
+
+/* CONTAINER */
+.container-main {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #E5E5E5;
+    
+}
+
+
+
+/* HEADER */
+.avatar {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 20px; 
+  
+}
+.avatar .name{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  
+}
+
+.avatar .city{
+  font-size: 10px;
+  font-weight: 400;
+  
+}
+
+#profile {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+
+
+
+/* FOOTER ICONS */
+.footer {
+    margin: 10px 0 10px 20px; 
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-icons span img {
+  padding-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.invisible{
+  display: none;
+}
+
+.bi-heart-fill {
+  position: absolute;
+  z-index: -99;
+  opacity: 0;
+}
+
+.heart-animation {
+  
+  position: absolute;
+  margin-left: -32.2px;
+  color: red; 
+  animation: zoom-in-zoom-out-none 0.5s normal;
+  opacity: 1;
+} 
+
+
+@keyframes zoom-in-zoom-out-none {
+    0% {
+      transform: scale(1, 1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+      opacity: .9;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 1;
+      z-index: 99;
+    }
+  }
+
+
+  /* FOOTER COMMENTS */
+
+  .comments {
+    margin: 0 20px 25px 20px;
+  }
+
+  .comments .text {
+    font-size: 12px;
+    padding-bottom: 5px;
+
+  }
+  .comments .text.text-post{
+    padding-bottom: 12px;
+
+  }
+  .comments .name {
+    font-weight: 600;
+
+  }
+
+
+  /* INPUT */
+
+  .input {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+    border-radius: 10%;
+  }
+
+
+  .inputText{
+    background-color: #F1F1F1;
+    width: 80%;
+    border: 0;
+    text-decoration: none;
+    padding: 15px 0 15px 10px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .inputText:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    }
+
+  .inputButton{
+    background-color: #F1F1F1;
+    border: 0;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    color: #3D8AFF;
+    border-radius: 0 10px 10px 0;
+  }
